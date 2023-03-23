@@ -25,38 +25,26 @@ function prezzoViaggio() {
 
     let prezzoBiglietto = km * prezzoKm;
 
-    let totale = prezzoBiglietto
-    
-    let costoTotale = `${(totale.toFixed(2))}€`
+    let totale = prezzoBiglietto;
 
     let numeroRandom = Math.floor(Math.random() * 10) + 1;
 
     let numeroRandom2 = Math.floor(Math.random() * 9999) + 1;
 
-    
-
-    eta.addEventListener('click',
-
-    function(){
-        let eta = etaPersona.value;
-        if (eta == maggiorenne) {
-            totale *= 0.80;
-            
-        }
-    }
-
-    )
-
-    
-
-    if (etaPersona < 18) {
+    if (etaPersona == 'minorenne') {
         totale *= 0.80;
-        
-    } else if (etaPersona > 65) {
+        offerta = 'Biglietto Under 18';
+
+    } else if (etaPersona == 'over65') {
         totale *= 0.60;
+        offerta = 'Biglietto Over 65';
+    } else {
+        offerta = 'Biglietto Standard';
     }
 
+    let costoTotale = `${(totale.toFixed(2))}€`
     document.getElementById('nomePassegero').innerHTML = nomeCognome
+    document.getElementById('offerta').innerHTML = offerta
     document.getElementById('carrozza').innerHTML = numeroRandom
     document.getElementById('codiceCP').innerHTML = numeroRandom2
     document.getElementById('risultato').innerHTML = costoTotale;
@@ -66,4 +54,3 @@ function clearInput() {
     document.getElementById("nomeCognome").value = "";
     document.getElementById("km").value = "";
 }
-

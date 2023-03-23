@@ -1,19 +1,11 @@
 .container{
     width: 80%;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     border-radius: 10px;
     box-shadow: 0 0 15px rgb(37, 41, 6);
-    animation: mymove 4s infinite;
 }
 
 .nome-passegero{
-    padding: 20px 30px;
+    padding: 10px;
     text-align: center;
-    border: 2px solid rgb(135, 250, 164);
-    border-radius: 20px;
-    box-shadow: 0 0 5px rgb(135, 250, 164);
+    background-color: gray;
 }
-

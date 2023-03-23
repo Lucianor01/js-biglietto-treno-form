@@ -12,8 +12,10 @@
 </head>
 
 <body class="bg-secondary">
+
+    <h2 class="text-center pt-5 text-warning">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
     <!-- FORM -->
-    <div class="container bg-light bg-gradient mt-5 p-3" id="reset">
+    <div class="container bg-light bg-gradient mt-5 p-3 text-center text-danger-emphasis" id="reset">
         <div class="row g-3 mb-3 ">
             <div class="col-md-4">
                 <label for="nomeCognome" class="form-label">Nome Cognome</label>
@@ -38,29 +40,30 @@
         </div>
         
     </div>
-
+    <h2 class="text-center pt-5 text-warning">IL TUO BIGLIETTO</h2>
+    <!-- CONTAINER DETTAGLIO PASSEGERI -->
     <div class="container bg-light bg-gradient mt-5 p-3">
         <h3>DETTAGLIO PASSEGERI</h3>
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between text-center">
             <div class="nome-passegero">
-                <h4>NOME PASSEGGERO</h4>
-                <h6 id="nomePassegero"></h6>
+                <h5>NOME PASSEGGERO</h5>
+                <h6 id="nomePassegero" class="text-warning"></h6>
             </div>
             <div>
-                <h6>Offerta</h6>
-                <span id="offerta"></span>
+                <h5>Offerta</h5>
+                <span id="offerta" class="mt-4 d-block bg-warning px-3"></span>
             </div>
             <div>
-                <h6>Carrozza</h6>
-                <span id="carrozza"></span>
+                <h5>Carrozza</h5>
+                <span id="carrozza" class="mt-4 d-block bg-warning"></span>
             </div>
             <div>
-                <h6>Codice CP</h6>
-                <span id="codiceCP"></span>
+                <h5>Codice CP</h5>
+                <span id="codiceCP" class="mt-4 d-block bg-warning"></span>
             </div>
             <div>
-                <h6>Costo Biglietto</h6>
-                <span id="risultato"></span>
+                <h5>Costo Biglietto</h5>
+                <span id="risultato" class="text-light mt-4 d-block bg-danger"></span>
             </div>
         </div>
         
