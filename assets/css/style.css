@@ -9,7 +9,7 @@
     animation: mymove 4s infinite;
 }
 
-h4{
+.nome-passegero{
     padding: 20px 30px;
     text-align: center;
     border: 2px solid rgb(135, 250, 164);

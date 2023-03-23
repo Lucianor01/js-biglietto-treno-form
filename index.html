@@ -26,9 +26,9 @@
             <div class="col-md-4">
                 <label for="eta" class="form-label">Fascia d'età</label>
                 <select name="eta" class="form-select border-danger" id="eta">
-                    <option value="volvo">Maggiorenne</option>
-                    <option value="saab">Minorenne</option>
-                    <option value="opel">Over 65</option>
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="minorenne">Minorenne</option>
+                    <option value="over65">Over 65</option>
                 </select>
             </div>
         </div>
@@ -42,21 +42,25 @@
     <div class="container bg-light bg-gradient mt-5 p-3">
         <h3>DETTAGLIO PASSEGERI</h3>
         <div class="d-flex justify-content-between">
-            <div>
+            <div class="nome-passegero">
                 <h4>NOME PASSEGGERO</h4>
-                <h6></h6>
+                <h6 id="nomePassegero"></h6>
             </div>
             <div>
                 <h6>Offerta</h6>
-                <span></span>
+                <span id="offerta"></span>
+            </div>
+            <div>
+                <h6>Carrozza</h6>
+                <span id="carrozza"></span>
             </div>
             <div>
                 <h6>Codice CP</h6>
-                <span></span>
+                <span id="codiceCP"></span>
             </div>
             <div>
                 <h6>Costo Biglietto</h6>
-                <span id="risultato mt-3"></span>
+                <span id="risultato"></span>
             </div>
         </div>
         

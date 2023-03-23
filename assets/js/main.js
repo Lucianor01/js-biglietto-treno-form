@@ -19,22 +19,46 @@ function prezzoViaggio() {
 
     let nomeCognome = document.getElementById('nomeCognome').value;
     let km = parseFloat(document.getElementById('km').value);
-    let eta = document.getElementById('eta').value;
+    let etaPersona = document.getElementById('eta').value;
 
     const prezzoKm = 0.21;
 
     let prezzoBiglietto = km * prezzoKm;
 
     let totale = prezzoBiglietto
+    
+    let costoTotale = `${(totale.toFixed(2))}€`
 
-    if (eta < 18) {
+    let numeroRandom = Math.floor(Math.random() * 10) + 1;
+
+    let numeroRandom2 = Math.floor(Math.random() * 9999) + 1;
+
+    
+
+    eta.addEventListener('click',
+
+    function(){
+        let eta = etaPersona.value;
+        if (eta == maggiorenne) {
+            totale *= 0.80;
+            
+        }
+    }
+
+    )
+
+    
+
+    if (etaPersona < 18) {
         totale *= 0.80;
-    } else if (eta > 65) {
+        
+    } else if (etaPersona > 65) {
         totale *= 0.60;
     }
 
-    let costoTotale = `Il costo totale del viaggio è: ${(totale.toFixed(2))}€`
-
+    document.getElementById('nomePassegero').innerHTML = nomeCognome
+    document.getElementById('carrozza').innerHTML = numeroRandom
+    document.getElementById('codiceCP').innerHTML = numeroRandom2
     document.getElementById('risultato').innerHTML = costoTotale;
 }
 
@@ -42,3 +66,4 @@ function clearInput() {
     document.getElementById("nomeCognome").value = "";
     document.getElementById("km").value = "";
 }
+
